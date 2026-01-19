@@ -12,6 +12,11 @@ class Player():
     
     def update(self):
         """左右キー入力を受けてプレイヤーを水平方向に移動する。"""
+        if pyxel.btn(pyxel.KEY_LEFT) and self.x > 0:
+            self.x -= 2
+        if pyxel.btn(pyxel.KEY_RIGHT) and self.x <127 - 14:
+            self.x += 2
+        
         
     
     def draw(self):
